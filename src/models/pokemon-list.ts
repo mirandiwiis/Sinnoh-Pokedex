@@ -1,4 +1,12 @@
+export interface PokemonItemFromApi {
+    entry_number: number,
+    pokemon_species:{
+        name: string,
+        url: string
+    }
+}
+
 export interface PokemonListFromApi {
-    name: string,
-    url: string,
+    pokemon_entries: PokemonItemFromApi[]
 };
+
