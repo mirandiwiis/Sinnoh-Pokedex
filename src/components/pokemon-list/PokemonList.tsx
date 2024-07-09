@@ -59,7 +59,7 @@ export const PokemonList = () => {
                     const imageUrl = getPokemonImage(pokemonNumber);
 
                     return (
-                        <Link to={`/pokemon/${pokemonNumber}`} key={pokemonItem.entry_number}>
+                        <Link to={`/${pokemonNumber}`} key={pokemonItem.entry_number}>
                             <PokemonCard
                                 imageUrl={imageUrl}
                                 name={pokemonItem.pokemon_species.name}
