@@ -1,5 +1,5 @@
 import { Outlet } from 'react-router-dom';
-import './App.css';
+import './styles/index.scss';
 import { TopBar } from './components/topBar/TopBar';
 import { Footer } from './components/footer/Footer';
 import React from 'react';
