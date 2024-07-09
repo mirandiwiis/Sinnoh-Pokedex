@@ -10,10 +10,10 @@
     Busca, descubre y conoce en detalle a tus pokémon favoritos de la región de Sinnoh
   <br/>
   <br/>
-  <a href="https://github.com/mirandiwiis/Sinnoh-Pokedex"><strong>Explore the docs »</strong></a>
+  <a href="https://github.com/mirandiwiis/Sinnoh-Pokedex"><strong>Explora los docs »</strong></a>
   <br/>
   <br/>
-  <a href="https://github.com/mirandiwiis/Sinnoh-Pokedex">View Demo .</a>  
+  <a href="https://sinnoh-pokedex-green.vercel.app/">Demo »</a>  
   </p>
 </div>
 
