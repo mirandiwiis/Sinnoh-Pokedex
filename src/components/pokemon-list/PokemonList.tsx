@@ -10,11 +10,11 @@ export const PokemonList = () => {
 
     // Variables for pagination
     const [currentPage, setCurrentPage] = useState(1);
-    const [pokemonPerPage] = useState(25);
+    const [pokemonPerPage] = useState(20);
 
     // Obtain -> index of last and first pokemon, current pokemon list of each page
     const indexOfLastPokemon = currentPage * pokemonPerPage;
-    const indexOfFirstPokemon = indexOfLastPokemon - currentPage;
+    const indexOfFirstPokemon = indexOfLastPokemon - pokemonPerPage;
     const currentPokemonList = pokemonList.slice(indexOfFirstPokemon, indexOfLastPokemon);
 
     // API call for Sinnoh pokemon list
@@ -33,12 +33,20 @@ export const PokemonList = () => {
         fetchPokemon();
     }, []);
 
-    // Manage pagination
-    const pagination = (pageNumber: number) => setCurrentPage(pageNumber);
-
     // Obtain total number of pages
     const totalPages = Math.ceil(pokemonList.length / pokemonPerPage);
 
+    // Function to check if is posible and then navigate to prev and next page
+    const goToPrevPage = () => {
+        if (currentPage !== 1) setCurrentPage(currentPage - 1);
+    };
+
+    const goToNextPage = () => {
+        if (currentPage !== totalPages) setCurrentPage(currentPage +1);
+    };
+
+    // Obtain all page numbers in Array
+    const pageNumbers = [...Array(totalPages + 1).keys()].slice(1);
  
     return (
         <div>
@@ -57,6 +65,23 @@ export const PokemonList = () => {
                         />
                     );
                 })}
+            </div>
+            <div className="pagination">
+                <ul>
+                    <li className="page-item">
+                        <a href="#" onClick={goToPrevPage}>Previous</a>
+                    </li>
+                    {pageNumbers.map(pageNum => (
+                        <li key={pageNum} className={`page-item ${currentPage === pageNum ? 'active' : ''}`}>
+                            <a href="#" onClick={() => setCurrentPage(pageNum)}>
+                                {pageNum}
+                            </a>
+                        </li>
+                    ))}
+                    <li className="page-item">
+                        <a href="#" onClick={goToNextPage}>Next</a>
+                    </li>
+                </ul>
             </div>
         </div>
     );
