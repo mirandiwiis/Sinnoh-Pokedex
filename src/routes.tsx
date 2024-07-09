@@ -1,6 +1,7 @@
 import { createBrowserRouter } from "react-router-dom";
 import App from "./App";
-import { Home } from "./pages/Home";
+import { Home } from "./pages/home/Home";
+import { PokemonDetails } from "./pages/pokemon-details/PokemonDetails";
 
 export const router = createBrowserRouter([
     {
@@ -10,7 +11,10 @@ export const router = createBrowserRouter([
                 path: '/',
                 element: <Home />,
             },
-
+            {
+                path:'/pokemon/:pokemonNumber',
+                element: <PokemonDetails/>,
+            },
         ]
     }
 ])

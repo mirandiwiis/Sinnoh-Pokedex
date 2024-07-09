@@ -8,9 +8,13 @@ export const PokemonCard = (props: PokemonCardProps) => {
 
     return (
         <div className="pokemon-card">
-            <img src={imageUrl} alt={name} />
-            <h3 className="pokemon-card__name">{name}</h3>
-            <p className="pokemon-card__number">{number}</p>
+            <div className="pokemon-card__img">
+                <img src={imageUrl} alt={name} />
+            </div>
+            <div className="pokemon-card__info">
+                <h3 className="pokemon-card__number">{number}</h3>
+                <p className="pokemon-card__name">{name}</p>
+            </div>
         </div>
     )
-}
+};

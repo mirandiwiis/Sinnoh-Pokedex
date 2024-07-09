@@ -1,3 +1,9 @@
+#root {
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+}
+
 html {
     box-sizing: border-box;
     font-size: 16px;
@@ -27,7 +33,7 @@ html {
     all: unset;
   }
 
-  body {
-    display: flex;
-    justify-content: center;
+  a {
+    color: black;
+    text-decoration: none; /* no underline */
   }

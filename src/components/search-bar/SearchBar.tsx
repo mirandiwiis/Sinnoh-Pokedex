@@ -4,7 +4,8 @@ import { useState } from "react";
 
 export const SearchBar = () => {
     const [isFocus, setIsFocus] = useState(false);
-
+    // const [searchTerm, setSearchTerm] = useState('');
+ 
     const handleInputFocus = () => {
         setIsFocus(true)
     };

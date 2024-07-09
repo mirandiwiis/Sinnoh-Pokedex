@@ -8,11 +8,9 @@ export const TopBar = () => {
     return (
         <div className="top-bar">
             <div className="top-bar__logo">
-                <img src="https://cdn-icons-png.flaticon.com/256/1169/1169608.png" alt="" />
+                <a href="../"  />
             </div>
-
             <SearchBar/>
-
             <div className="top-bar__socials">
                 <div className="top-bar__favourites">
                     <FaRegHeart/>

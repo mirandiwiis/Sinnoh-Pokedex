@@ -1,6 +1,24 @@
 .pokemon-card {
     height: 200px;
     width: 200px;
-    border: 1px solid black;
-    border-radius: 12px;
+    border: 2px solid var(--color-navy);
+    border-radius: 16px;
+
+    &__img {
+        height: 110px;
+    }
+
+    &__info {
+        height: 90px;
+        background-color: var(--color-navy);
+        color: var(--color-yellow);
+        border-bottom-left-radius: 16px;
+        border-bottom-right-radius: 16px;
+
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        gap: 5px;
+    }
+
 }
