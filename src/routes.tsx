@@ -1,7 +1,7 @@
 import { createBrowserRouter } from "react-router-dom";
 import App from "./App";
 import { Home } from "./pages/home/Home";
-import { PokemonDetails } from "./pages/pokemon-details/PokemonDetails";
+import { PokemonDetailsPage } from "./pages/pokemon-details/PokemonDetails";
 
 export const router = createBrowserRouter([
     {
@@ -13,7 +13,7 @@ export const router = createBrowserRouter([
             },
             {
                 path:'/:pokemonNumber',
-                element: <PokemonDetails/>,
+                element: <PokemonDetailsPage/>,
             },
         ]
     }

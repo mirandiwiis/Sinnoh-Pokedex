@@ -1,9 +1,9 @@
 .type-tag {
-    height: 40px;
+    height: 24px;
     width: max-content;
     border-radius: 20px;
-    font-size: 18px;
-    color: white;
+    font-size: 14px;
+    color: var(--color-white);
     padding: 0 12px;
     display: flex;
     justify-content: center;
@@ -78,7 +78,7 @@
         background-color: hsl(29, 45%, 50%);
     }
 
-    &.fliying {
+    &.flying {
         background-color: hsl(223, 72%, 73%);
     }
 }
