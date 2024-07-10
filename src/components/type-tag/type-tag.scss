@@ -1,0 +1,84 @@
+.type-tag {
+    height: 40px;
+    width: max-content;
+    border-radius: 20px;
+    font-size: 18px;
+    color: white;
+    padding: 0 12px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: 400;
+    
+    &.fire {
+        background-color: hsl(25, 90%, 72%);
+    }
+
+    &.bug {
+        background-color: hsl(101, 38%, 49%);
+    }
+
+    &.fairy {
+        background-color: hsl(331, 94%, 77%);
+    }
+
+    &.ghost {
+        background-color: hsl(252, 84%, 65%);
+    }
+
+    &.normal {
+        background-color: hsl(0, 0%, 68%);
+    }
+
+    &.psychic {
+        background-color: hsl(292, 93%, 65%);
+    }
+
+    &.dark {
+        background-color: hsl(0, 0%, 33%);
+    }
+
+    &.electric {
+        background-color: hsl(52, 85%, 68%);
+    }
+
+    &.fighting {
+        background-color: hsl(7, 79%, 72%);
+    }
+
+    &.grass {
+        background-color: hsl(100, 72%, 77%);
+    }
+
+    &.ice {
+        background-color: hsl(176, 84%, 78%);
+    }
+
+    &.poison {
+        background-color: hsl(266, 88%, 71%);
+    }
+
+    &.water {
+        background-color: hsl(209, 82%, 72%);
+    }
+
+    &.rock {
+        background-color: hsl(29, 16%, 45%);
+    }
+
+    &.steel {
+        background-color: hsl(182, 23%, 82%);
+    }
+
+    &.dragon {
+        background-color: hsl(151, 80%, 74%);
+    }
+
+    &.ground {
+        background-color: hsl(29, 45%, 50%);
+    }
+
+    &.fliying {
+        background-color: hsl(223, 72%, 73%);
+    }
+}

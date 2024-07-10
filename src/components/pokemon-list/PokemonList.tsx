@@ -26,7 +26,6 @@ export const PokemonList = () => {
             try {
                 const pokemonApiURL  = 'https://pokeapi.co/api/v2/pokedex/6';
                 const response = await axios.get(pokemonApiURL);
-                // console.log('Pokemon sinnoh', response.data.pokemon_entries);
                 setPokemonList(response.data.pokemon_entries);
             }
             catch {
