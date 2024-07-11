@@ -1,15 +1,19 @@
 :root {
+
 /*------------------------------------*\
     $COLOR-VAR
 \*------------------------------------*/
+
     --color-white: hsl(0, 0%, 100%);
+    --color-grey-soft: hsl(220, 50%, 98%);
     --color-grey: hsl(0, 0%, 58%);
-    --color-soft-grey: hsl(220, 50%, 98%);
+    --color-grey-dark:  hsl(0, 0%, 38%);
+    --color-black:  hsl(0, 0%, 3%);
     --color-yellow: hsl(48,100%, 51%);
-    --color-blue: hsl(216, 54%, 45%);
+
 
 /*------------------------------------*\
-    $COLOR-TYPES
+    $COLOR-FOR-POKEMON-TYPES
 \*------------------------------------*/
     --color-grass: hsl(101, 62%, 67%);
     --color-normal: hsl(0, 0%, 44%);

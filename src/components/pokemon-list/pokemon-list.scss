@@ -26,6 +26,10 @@
     align-items: center;
     justify-content: center;
     padding: 0 4px;
+
+    body.dark & {
+        background-color: var(--color-grey-dark);
+    }
 }
 
 .page-item {
@@ -46,5 +50,11 @@
     &.active {
         border: 2px solid var(--color-yellow);
         border-radius: 21px;
+    }
+
+    body.dark & {
+        &.icon {
+            color: var(--color-black);
+        }
     }
 }
