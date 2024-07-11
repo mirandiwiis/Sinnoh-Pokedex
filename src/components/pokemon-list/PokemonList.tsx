@@ -7,11 +7,14 @@ import { PokemonCard } from "../pokemon-card/PokemonCard";
 import { Link } from "react-router-dom";
 import { usePagination } from "../../hooks/usePagination";
 import { Pagination } from "../pagination/Pagination";
+import { CiGrid2H, CiGrid41 } from "react-icons/ci";
 
 export const PokemonList = () => {
     const [pokemonList, setPokemonList] = useState<PokemonItemFromApi[]>([]);
     const { currentPage, totalPages, goToPrevPage, goToNextPage, setPage, firstIndex, lastIndex } = usePagination(pokemonList.length, 21);
 
+    // Manage list and grid layout (initial grid)
+    const [layout, setLayout] = useState<'grid' |'list'>('grid');
 
     // API call for Sinnoh pokemon list
     useEffect(() => {
@@ -31,9 +34,34 @@ export const PokemonList = () => {
     // Obtain a list for each page of the pokemonList
     const currentPokemonList = pokemonList.slice(firstIndex, lastIndex);
 
+    // Funtion to manage the selected layout
+    const changeLayout = () => {
+        setLayout((prevLayout) => (prevLayout === 'grid' ? 'list' : 'grid'))
+    };
+
     return (
         <div>
-            <div className="pokemon-list">
+            {layout === 'grid' ? (
+                <div className="layout-toggle">
+                    <div>
+                        <CiGrid2H size={32} color="grey" />
+                    </div>
+                    <div onClick={changeLayout}>
+                        <CiGrid41 size={32}/>
+                    </div>
+                </div>
+                
+            ): (
+                <div className="layout-toggle">
+                    <div onClick={changeLayout}>
+                        <CiGrid2H size={32} />
+                    </div>
+                    <div >
+                        <CiGrid41 size={32} color="grey"/>
+                    </div>
+                </div>
+            )}
+            <div className={`pokemon-list ${layout}`}>
             {currentPokemonList.map(pokemonItem => {
                     const pokemonNumber = getPokemonNumber(pokemonItem.pokemon_species.url);
                     const imageUrl = getPokemonImage(pokemonNumber);
@@ -44,6 +72,7 @@ export const PokemonList = () => {
                                 imageUrl={imageUrl}
                                 name={pokemonItem.pokemon_species.name}
                                 number={pokemonNumber}
+                                className={layout}
                             />
                         </Link>
                     );
