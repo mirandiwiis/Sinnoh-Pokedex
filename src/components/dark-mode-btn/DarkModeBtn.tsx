@@ -1,6 +1,5 @@
 import { useEffect, useState } from "react"
 import { MdDarkMode, MdLightMode } from "react-icons/md";
-import './dark-mode-btn.scss';
 
 export const DarkModeBtn = () => {
     const [isDark, setIsDark] = useState(false);

@@ -1,6 +1,5 @@
 import { DarkModeBtn } from '../dark-mode-btn/DarkModeBtn';
 import { SearchBar } from '../search-bar/SearchBar';
-import './top-bar.scss';
 
 
 export const TopBar = () => {

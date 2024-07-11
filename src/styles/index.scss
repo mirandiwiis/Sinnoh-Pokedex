@@ -1,2 +1,9 @@
-@import './main.scss';
 @import './variables';
+@import './global-styles';
+@import './components/dark-mode-btn';
+@import './components/home';
+@import './components/pokemon-card';
+@import './components/pokemon-list';
+@import './components/search-bar';
+@import './components/top-bar';
+@import './components/type-tag';

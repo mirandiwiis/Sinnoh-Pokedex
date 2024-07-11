@@ -4,7 +4,6 @@ import axios from "axios";
 import { getPokemonNumber } from "../../utils/getPokemonNumber";
 import { getPokemonImage } from "../../utils/getPokemonImage";
 import { PokemonCard } from "../pokemon-card/PokemonCard";
-import './pokemon-list.scss';
 import { FaAngleLeft, FaAngleRight } from "react-icons/fa";
 import { Link } from "react-router-dom";
 

@@ -1,5 +1,4 @@
 import { PokemonTypeProps } from "../../models/type-tag";
-import './type-tag.scss';
 
 export const TypeTag = ({
     typeName,

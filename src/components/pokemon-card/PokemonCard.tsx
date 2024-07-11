@@ -3,7 +3,6 @@ import { PokemonCardProps } from "../../models/pokemon-card";
 import { capitalizeFirstLetter } from "../../utils/capitaliceFirstLetter";
 import { getPokemonImage } from "../../utils/getPokemonImage";
 import { TypeTag } from "../type-tag/TypeTag";
-import './pokemon-card.scss';
 
 export const PokemonCard = (props: PokemonCardProps) => {
     const { name, number } = props;

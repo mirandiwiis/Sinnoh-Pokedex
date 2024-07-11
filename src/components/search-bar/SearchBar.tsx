@@ -1,5 +1,4 @@
 import { CiSearch } from "react-icons/ci";
-import './search-bar.scss';
 import { useState } from "react";
 
 export const SearchBar = () => {

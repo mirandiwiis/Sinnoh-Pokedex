@@ -1,4 +1,3 @@
-import './home.scss';
 import { PokemonList } from "../../components/pokemon-list/PokemonList";
 
 
