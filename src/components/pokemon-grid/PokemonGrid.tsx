@@ -6,12 +6,18 @@ import { Pagination } from "../pagination/Pagination";
 import { usePokemonList } from "../../hooks/usePokemonList";
 import { useFavouritesList } from "../../hooks/useFavouritesList";
 
-export const PokemonList = () => {
+export const PokemonGrid = () => {
     const { pokemonList, error } = usePokemonList();
     const { currentPage, totalPages, goToPrevPage, goToNextPage, setPage, firstIndex, lastIndex } = usePagination(pokemonList.length, 21);
     const { likes, handleLikes } = useFavouritesList({ pokemonList });
 
     const currentPokemonList = pokemonList.slice(firstIndex, lastIndex);
+
+
+    // const resetFavorites = () => {
+    //     localStorage.removeItem('likes');
+    //     setLikes([]);
+    // };
 
     if (error) {
         return <div>Fatal error occurred: {error}</div>;
@@ -19,7 +25,8 @@ export const PokemonList = () => {
 
     return (
         <div className="pokemon-container">
-            <div className='pokemon-list'>
+            
+            <div className={`pokemon-grid`}>
                 {currentPokemonList.map(pokemonItem => {
                     const pokemonNumber = getPokemonNumber(pokemonItem.pokemon_species.url);
                     const imageUrl = getPokemonImage(pokemonNumber);
@@ -31,7 +38,7 @@ export const PokemonList = () => {
                                 imageUrl={imageUrl}
                                 name={pokemonName}
                                 number={pokemonNumber}
-                                className='list'
+                                className='grid'
                                 onLike={() => handleLikes(pokemonNumber)}
                                 isLiked={likes.includes(pokemonNumber)}
                             />

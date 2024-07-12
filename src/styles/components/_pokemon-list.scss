@@ -1,19 +1,15 @@
 .pokemon-list {
-    margin: auto;
+    display: flex;
+    flex-direction: column;
+}
 
-    &.grid {
-        display: grid;
-        grid-template-columns: repeat(7, 1fr);
-        grid-template-rows: repeat(3, 1fr);
-        gap: 16px; /* Espacio entre las celdas */
-        height: 100%; /* Ajusta la altura según sea necesario */
-        width: 50%; /* Ajusta el ancho según sea necesario */
-    }
-    
-    &.list {
-        display: flex;
-        flex-direction: column;
-    }
+.pokemon-grid {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+   
+    height: 100%; /* Ajusta la altura según sea necesario */
+    width: 100%;
 }
 
 

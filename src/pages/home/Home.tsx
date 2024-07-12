@@ -1,12 +1,11 @@
-import { PokemonList } from "../../components/pokemon-list/PokemonList";
+import { Layout } from "../../components/layout/Layout";
 
 export const Home = () => {
     // cosnt { pokemonList, error } = usePokemonList();
 
     return (
         <div>
-            {/* <PokemonList pokemonList={PokemonList} error=""/> */}
-            <PokemonList/>
+            <Layout/>
         </div>
     );
 };
