@@ -17,7 +17,7 @@ export const PokemonCard = (props: PokemonCardProps) => {
             {pokemonDetails && ( 
                 <Link to={`/${number}`} key={number}>
                     <div className={`pokemon-card ${className}`}>
-                    <button onClick={(event) => {  event.preventDefault(); onLike(event); }}>
+                    <button onClick={(event) => {  event.preventDefault(); onLike(event); }} className="fav-btn">
                         {isLiked ? <FaHeart/> : <FaRegHeart/>}
                     </button>
                     <img src={imageUrl} alt={name} className="pokemon-card__img"/>
