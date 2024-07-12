@@ -14,7 +14,7 @@
         display: flex;
         flex-direction: column;
         align-items: center;
-        gap: 5px;
+        gap: 10px;
         margin: -40px 0 0 0; // Comun
         padding: 40px 0 15px 0; // Comun
         border-radius: 16px;
@@ -25,10 +25,20 @@
         &.list {
             display: flex;
             flex-direction: row;
+            justify-content: space-between;
             width: 90%;
             margin: 0 0 0 -40px;
             padding: 0 0 0 20px;
             z-index: -1;
+        }
+    }
+
+    &__text {
+        &.list {
+            display: flex;
+            align-items: center;
+            gap: 26px;
+            margin-left: 12px;
         }
     }
 
@@ -45,7 +55,6 @@
     &__types {
         display: flex;
         gap: 6px;
-        margin-top: 5px;
     }
 
     body.dark & {
@@ -58,4 +67,23 @@
             color: var(--color-grey-soft);
         }
     }
+}
+
+.fav-btn {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+
+    &.grid {
+        position: absolute;
+        margin-top: -95px;
+        margin-left: 60px;
+    }
+}
+
+.pokemon-card__list {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-right: 24px;
 }

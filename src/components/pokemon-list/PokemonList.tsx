@@ -40,6 +40,7 @@ export const PokemonList = () => {
         localStorage.setItem('likes', JSON.stringify(updatedLikes));
     };
 
+
     const currentPokemonList = pokemonList.slice(firstIndex, lastIndex);
 
     const changeLayout = () => {
