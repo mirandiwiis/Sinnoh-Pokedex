@@ -1,8 +1,8 @@
 import { useEffect, useState } from "react"
-import { PokemonItemFromApi } from "../models/pokemon-list"
+import { PokemonCardProps } from "../models/pokemon-card";
 
 export const useFavourites = () => {
-    const [favoritesPokemon, setFavoritesPokemon] = useState<PokemonItemFromApi[]>([]);
+    const [favoritesPokemon, setFavoritesPokemon] = useState<PokemonCardProps[]>([]);
 
     // Obtaining favourites from localStorage when component is mounted
     useEffect(() => {
@@ -13,7 +13,7 @@ export const useFavourites = () => {
     }, []);
 
     // Funtions to manage adding and removing pokemons to favourites
-    const addFavPokemon = (pokemon: PokemonItemFromApi) => {
+    const addFavPokemon = (pokemon: PokemonCardProps) => {
         // Adding at the end the new fav pokemon, update favouritesPokemon
         const newFavList = [...favoritesPokemon, pokemon];
         setFavoritesPokemon(newFavList);
@@ -23,7 +23,7 @@ export const useFavourites = () => {
 
     const removeFavPokemon = (pokemonNumber: number) => {
         // New fav list except for the pokemon selected
-        const newFavList = favoritesPokemon.filter (pokemon => pokemon.entry_number !== pokemonNumber);
+        const newFavList = favoritesPokemon.filter (pokemon => pokemon.number !== pokemonNumber);
         setFavoritesPokemon(newFavList);
         localStorage.setItem('favorites', JSON.stringify(newFavList));
     }
