@@ -14,5 +14,7 @@ export const mapApiPokemonDetails = (data: PokemonDetailsFromApi): PokemonDetail
             name: type.type.name,
         })),
         images: data.sprites,
+        name: data.name,
+        number: data.id
     }
 };

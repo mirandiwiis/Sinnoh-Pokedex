@@ -15,7 +15,6 @@ export const usePokemonDetails = (pokemonNumber: string | number | undefined) =>
             try {
                 const pokemonDetailsUrl = `https://pokeapi.co/api/v2/pokemon/${pokemonNumber}/`;
                 const response = await axios.get(pokemonDetailsUrl);
-                console.log(response.data);
                 const mappedDetails = mapApiPokemonDetails(response.data);
                 pokemonDetailsRef.current = mappedDetails;
                 setLoading(false);
@@ -28,5 +27,6 @@ export const usePokemonDetails = (pokemonNumber: string | number | undefined) =>
         fetchPokemonDetails();
     }, [pokemonNumber]);
 
+    console.log(pokemonDetailsRef.current);
     return { loading, error, pokemonDetails: pokemonDetailsRef.current };
 };

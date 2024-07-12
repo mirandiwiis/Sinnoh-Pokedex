@@ -1,6 +1,8 @@
 export interface PokemonCardProps {
-    name: string,
-    number: number,
+    name: string;
+    number: number;
     imageUrl: string
-    className?: string,
+    className?: string;
+    onLike: (event: React.MouseEvent<HTMLButtonElement>) => void;
+    isLiked: boolean;
 }

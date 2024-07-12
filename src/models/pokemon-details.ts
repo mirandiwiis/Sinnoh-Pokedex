@@ -1,4 +1,6 @@
 export interface PokemonDetailsFromApi {
+    id: number;
+    name: string;
     base_experience: number;
     height: number;
     weight: number;
@@ -31,6 +33,8 @@ interface ImagesFromApi {
 }
 
 export interface PokemonDetailsType {
+    name: string;
+    number: number;
     points: number;
     weight: number;
     height: number;
