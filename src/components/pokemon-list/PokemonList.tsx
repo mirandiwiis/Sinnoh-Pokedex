@@ -5,6 +5,7 @@ import { usePagination } from "../../hooks/usePagination";
 import { Pagination } from "../pagination/Pagination";
 import { usePokemonList } from "../../hooks/usePokemonList";
 import { useFavouritesList } from "../../hooks/useFavouritesList";
+import { DetailedCard } from "../detailed-card/DetailedCard";
 
 export const PokemonList = () => {
     const { pokemonList, error } = usePokemonList();
@@ -12,6 +13,7 @@ export const PokemonList = () => {
     const { likes, handleLikes } = useFavouritesList({ pokemonList });
 
     const currentPokemonList = pokemonList.slice(firstIndex, lastIndex);
+
 
     if (error) {
         return <div>Fatal error occurred: {error}</div>;
@@ -39,6 +41,8 @@ export const PokemonList = () => {
                     );
                 })}
             </div>
+
+            <DetailedCard/>
             
             <button >Clear Likes</button>
             <Pagination

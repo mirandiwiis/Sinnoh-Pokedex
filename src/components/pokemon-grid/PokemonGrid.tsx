@@ -13,12 +13,6 @@ export const PokemonGrid = () => {
 
     const currentPokemonList = pokemonList.slice(firstIndex, lastIndex);
 
-
-    // const resetFavorites = () => {
-    //     localStorage.removeItem('likes');
-    //     setLikes([]);
-    // };
-
     if (error) {
         return <div>Fatal error occurred: {error}</div>;
     }
