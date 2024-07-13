@@ -5,6 +5,7 @@ import { usePagination } from "../../hooks/usePagination";
 import { Pagination } from "../pagination/Pagination";
 import { usePokemonList } from "../../hooks/usePokemonList";
 import { useFavouritesList } from "../../hooks/useFavouritesList";
+import { Link } from "react-router-dom";
 
 export const PokemonGrid = () => {
     const { pokemonList, error } = usePokemonList();
@@ -18,7 +19,7 @@ export const PokemonGrid = () => {
     }
 
     return (
-        <div className="pokemon-container">
+        <div className="page-list">
             
             <div className={`pokemon-grid`}>
                 {currentPokemonList.map(pokemonItem => {
@@ -28,6 +29,7 @@ export const PokemonGrid = () => {
 
                     return (
                         <div key={pokemonNumber}>
+                            <Link to={`/${pokemonNumber}`} key={pokemonNumber}>
                             <PokemonCard
                                 imageUrl={imageUrl}
                                 name={pokemonName}
@@ -36,6 +38,7 @@ export const PokemonGrid = () => {
                                 onLike={() => handleLikes(pokemonNumber)}
                                 isLiked={likes.includes(pokemonNumber)}
                             />
+                            </Link>
                         </div>
                     );
                 })}

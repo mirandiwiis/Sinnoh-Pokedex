@@ -1,28 +1,29 @@
 import axios from "axios";
-import { useEffect, useRef } from "react"
+import { useEffect, useState } from "react"
 import { mapApiSpeciesDetails } from "../utils/maps/mapApiSpeciesDetails";
 import { PokemonSpeciesType } from "../models/pokemon-species";
 
 export const useSpecieDetails = (pokemonNumber: number) => {
-    const pokemonSpeciesRef = useRef<PokemonSpeciesType>();
+    const [pokemonSpecies, setPokemonSpecies] = useState<PokemonSpeciesType | null>(null);
+    const [error, setError] = useState(''); 
+    const [loading, setLoading] = useState(true);
 
     useEffect(() => {
         const fetchSpeciesDetails = async () => {
-            if (!pokemonNumber) {
-                return;
-            }
             try {
                 const speciesApiUrl = `https://pokeapi.co/api/v2/pokemon-species/${pokemonNumber}/`;
                 const response = await axios.get(speciesApiUrl);
-                const mappedSpecie = mapApiSpeciesDetails(response.data)
-                pokemonSpeciesRef.current = mappedSpecie;
-                
+                const mappedSpecies = mapApiSpeciesDetails(response.data);
+                setPokemonSpecies(mappedSpecies);
+                setLoading(false);
+                console.log(pokemonSpecies);
             } catch {
-                console.log('error');
+                setError('Error fetching pokemon specie details');
+                setLoading(false);
             }
         };
         fetchSpeciesDetails();
     }, [pokemonNumber]);
 
-    return { pokemonSpecies: pokemonSpeciesRef.current};
+    return { pokemonSpecies, error, loading};
 };

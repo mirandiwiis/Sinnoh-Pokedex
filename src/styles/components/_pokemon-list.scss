@@ -1,3 +1,9 @@
+.pokemon-container {
+    display: flex;
+    gap: 42px;
+    justify-content: center;
+}
+
 .pokemon-list {
     display: flex;
     flex-direction: column;
