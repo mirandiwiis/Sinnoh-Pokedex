@@ -1,0 +1,28 @@
+.pokemon-container {
+    display: flex;
+    gap: 42px;
+    justify-content: center;
+}
+
+.pokemon-list {
+    display: flex;
+    flex-direction: column;
+}
+
+.pokemon-grid {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+   
+    height: 100%; /* Ajusta la altura según sea necesario */
+    width: 100%;
+}
+
+
+.layout-toggle {
+    max-width: fit-content;
+    padding: 12px;
+    background-color: var(--color-grey);
+    border-radius: 12px;
+    display: flex;
+}

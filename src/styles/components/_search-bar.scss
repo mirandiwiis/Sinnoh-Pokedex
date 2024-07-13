@@ -1,0 +1,28 @@
+.search-bar {
+    display: flex;
+    align-items: center;
+    width: 450px;
+    height: 50px;
+    border: 2px solid var(--color-grey);
+    border-radius: 12px;
+    padding: 0 12px;
+    gap: 6px;
+    transition: box-shadow 0.3s ease; /* Transición para el efecto de resaltado */
+
+    &__input {
+        text-align: start;
+        font-size: 18px;
+        border: none;
+        outline: none;
+        background: transparent; /* Fondo transparente para el input */
+    }
+
+    &__icon {
+        width: 20px;
+        height: 20px;
+    }
+
+    &.focus {
+        box-shadow: 0 0 0 3px var(--color-yellow); /* Efecto de resaltado al estar enfocado */
+    }
+}

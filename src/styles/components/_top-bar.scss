@@ -1,0 +1,13 @@
+.top-bar {
+    display: flex;
+    justify-content: space-between;
+    margin: 50px 32px;
+
+    &__socials {
+        display: flex;
+    }
+
+    &__logo {
+        background-color: url('src/assets/pokedex/pokedex-logo.png');
+    }
+}
