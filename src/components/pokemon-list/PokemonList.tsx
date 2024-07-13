@@ -10,7 +10,7 @@ import { useEffect, useState } from "react";
 
 export const PokemonList = () => {
     const { pokemonList, error } = usePokemonList();
-    const { currentPage, totalPages, goToPrevPage, goToNextPage, setPage, firstIndex, lastIndex } = usePagination(pokemonList.length, 11);
+    const { currentPage, totalPages, goToPrevPage, goToNextPage, setPage, firstIndex, lastIndex } = usePagination(pokemonList.length, 10);
     const { likes, handleLikes } = useFavouritesList({ pokemonList });
     const [selectedPokemon, setSelectedPokemon] = useState<number | null>(387);
     const currentPokemonList = pokemonList.slice(firstIndex, lastIndex);
