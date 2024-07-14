@@ -27,5 +27,6 @@ export const usePokemonDetails = (pokemonNumber: number | undefined) => {
         fetchPokemonDetails();
     }, [pokemonNumber]);
 
+
     return { loading, error, pokemonDetails: pokemonDetailsRef.current };
 };

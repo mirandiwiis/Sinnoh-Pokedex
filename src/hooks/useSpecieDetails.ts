@@ -4,7 +4,7 @@ import { mapApiSpeciesDetails } from "../utils/maps/mapApiSpeciesDetails";
 import { PokemonSpeciesType } from "../models/pokemon-species";
 
 export const useSpecieDetails = (pokemonNumber: number | undefined) => {
-    const [pokemonSpecies, setPokemonSpecies] = useState<PokemonSpeciesType | null>(null);
+    const [pokemonSpecies, setPokemonSpecies] = useState<PokemonSpeciesType>();
     const [error, setError] = useState(''); 
     const [loading, setLoading] = useState(true);
 

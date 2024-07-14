@@ -7,6 +7,7 @@ import { calculateStateRange } from "../../utils/calculateStatRange";
 import { useSpecieDetails } from "../../hooks/useSpecieDetails";
 import { useState } from "react";
 import { HiSparkles } from "react-icons/hi";
+import { PokemonEvolutionsPage } from "../../components/evolution-pokemon.tsx/EvolutionChain";
 
 export const PokemonDetailsPage = () => {
     const { pokemonNumber } = useParams();
@@ -30,7 +31,6 @@ export const PokemonDetailsPage = () => {
         return <div>Error: Unable to fetch Pokemon details</div>;
     }
     const statRange = calculateStateRange(pokemonDetails.stats);
-    
 
     return (
         <div className="details">
@@ -85,8 +85,9 @@ export const PokemonDetailsPage = () => {
                             />
                         ))}
                     </div>
-                    <div>
-                        Evolution Chain
+                    <div className="details__chain">
+                    <h4>EVOLUTION CHAIN:</h4>
+                        <PokemonEvolutionsPage pokemonNumber={pokedexNumber}/>
                     </div>
                 </div>
             </div>
