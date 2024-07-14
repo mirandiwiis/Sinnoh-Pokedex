@@ -4,16 +4,24 @@
     background-color: var(--color-grey-soft);
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     border-radius: 16px;
+    position: relative;
+
+    &__img-container {
+        position: absolute; /* Posicionar absolutamente el contenedor de la imagen dentro de .detailed-card */
+        top: -80px; /* Ajustar según sea necesario para que la mitad superior de la imagen salga del fondo gris */
+        left: 50%; /* Centrar horizontalmente */
+        transform: translateX(-50%); /* Alinear al centro */
+    }
 
     &__img {
         height: 160px;
     }
 
     &__info {
-        margin: 20px 62px ;
+        margin: 116px 62px ;
         display: flex;
         flex-direction: column;
-        gap: 24px;
+        gap: 16px;
         & h2 {
             font-size: 32px;
             font-weight: bold;
@@ -29,9 +37,22 @@
             font-size: 20px;
         }
     }
+
+    &__entry > :not(:last-child) {
+            margin-bottom: 12px;
+    }
+
+    &__entry {
+        height: 100px;
+    }
+
     &__types {
         display: flex;
         justify-content: center;
         gap: 20px;
+    }
+
+    &__stat {
+        display: flex;
     }
 }

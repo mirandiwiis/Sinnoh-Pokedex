@@ -3,8 +3,8 @@ import { useEffect, useState } from "react"
 import { mapApiSpeciesDetails } from "../utils/maps/mapApiSpeciesDetails";
 import { PokemonSpeciesType } from "../models/pokemon-species";
 
-export const useSpecieDetails = (pokemonNumber: number) => {
-    const [pokemonSpecies, setPokemonSpecies] = useState<PokemonSpeciesType | null>(null);
+export const useSpecieDetails = (pokemonNumber: number | undefined) => {
+    const [pokemonSpecies, setPokemonSpecies] = useState<PokemonSpeciesType>();
     const [error, setError] = useState(''); 
     const [loading, setLoading] = useState(true);
 
@@ -16,7 +16,6 @@ export const useSpecieDetails = (pokemonNumber: number) => {
                 const mappedSpecies = mapApiSpeciesDetails(response.data);
                 setPokemonSpecies(mappedSpecies);
                 setLoading(false);
-                console.log(pokemonSpecies);
             } catch {
                 setError('Error fetching pokemon specie details');
                 setLoading(false);

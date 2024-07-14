@@ -26,7 +26,7 @@ export const PokemonCard = (props: PokemonCardProps) => {
                         <div className={`pokemon-card__${className}`}>
                             <div className='pokemon-card__types'>
                                 {pokemonDetails.types.map((type, index) => (
-                                    <TypeTag key={`${index}-${type.name}`} typeName={type.name}/>
+                                    <TypeTag key={`${index}-${type.name}`} typeName={type.name} size="sm"/>
                                 ))}
                             </div>
                             <button 

@@ -1,7 +1,8 @@
 @import './utils/variables';
 @import './utils/global-styles';
 @import './components/dark-mode-btn';
-@import './components/home';
+@import './pages/home';
+@import './pages/pokemon-details';
 @import './components/pokemon-card';
 @import './components/pokemon-list';
 @import './components/search-bar';
@@ -9,3 +10,5 @@
 @import './components/type-tag';
 @import './components/pagination';
 @import './components/detailed-card';
+@import './components/progress-bar';
+@import './components/evolution-chain';
