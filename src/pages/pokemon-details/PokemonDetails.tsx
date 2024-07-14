@@ -9,6 +9,7 @@ import { useEffect, useState } from "react";
 import { HiSparkles } from "react-icons/hi";
 import { PokemonEvolutionsPage } from "../../components/evolution-pokemon.tsx/EvolutionChain";
 import { FaAngleLeft, FaAngleRight } from "react-icons/fa";
+import { BackHomeBtn } from "../../components/back-home-btn/BackHomeBtn";
 
 export const PokemonDetailsPage = () => {
     const { pokemonNumber } = useParams();
@@ -39,6 +40,7 @@ export const PokemonDetailsPage = () => {
 
     return (
         <div className="details-page">
+            <BackHomeBtn/>
             <div className="details">
                 <div className="details__info">
                     <div className="details__info--1">

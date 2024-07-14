@@ -22,7 +22,9 @@
 .layout-toggle {
     max-width: fit-content;
     padding: 12px;
-    background-color: var(--color-grey);
+    background-color: var(--color-grey-soft);
     border-radius: 12px;
     display: flex;
+    box-shadow: var(--box-shadow);
+    width: 100%;
 }

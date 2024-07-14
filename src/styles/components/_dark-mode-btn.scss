@@ -2,18 +2,18 @@
     width: 50px;
     height: 50px;
     border-radius: 12px;
-    border: 2px solid var(--color-grey);
-    background: transparent;
+    background-color: var(--color-grey-soft);
+    border: none;
+    box-shadow: var(--box-shadow);
 
     &__icon {
-        color: var(--color-grey);
+        color: var(--color-black);
     }
 
     body.dark & {
-        background-color: var(--color-grey);
 
         &__icon {
-            color: var(--color-white);
+            color: var(--color-yellow);
         }
     }
 }

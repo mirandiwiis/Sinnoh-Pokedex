@@ -7,7 +7,7 @@ export const TopBar = () => {
     return (
         <div className="top-bar">
             <div className="top-bar__logo">
-                <a href="../"  />
+                <img src="https://static.vecteezy.com/system/resources/thumbnails/027/127/571/small/pokemon-logo-pokemon-icon-transparent-free-png.png" alt="" />
             </div>
             <SearchBar/>
             {/* <div className="top-bar__socials">

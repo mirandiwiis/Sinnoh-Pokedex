@@ -3,7 +3,7 @@
     width: 80%;
     height: 700px;
     background-color: var(--color-grey-soft);
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    box-shadow: var(--box-shadow);
     border-radius: 16px;
     margin: auto;
     position: relative;
@@ -122,7 +122,7 @@
 
     &__item {
         background-color: var(--color-grey-soft);
-        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        box-shadow: var(--box-shadow);
         border-radius: 21px;
         height: 42px;
         width: 100px;

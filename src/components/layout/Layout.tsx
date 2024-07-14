@@ -12,29 +12,18 @@ export const Layout = () => {
     };
 
     return (
-        <div>   
+        <div className="layout">
             <div className="layout-toggle">
                 <div onClick={changeLayout}>
-                    {layout === 'grid' ? (
-                        <CiGrid2H size={32} />
-                    ) : (
-                        <CiGrid41 size={32} />
-                    )}
+                    <CiGrid2H size={32} color={layout === 'grid' ? 'black' : 'grey'} />
+                    <CiGrid41 size={32} color={layout === 'list' ? 'black' : 'grey'} />
                 </div>
-            <div>
-                {layout === 'grid' ? (
-                    <CiGrid41 size={32} color="grey" />
-                ) : (
-                    <CiGrid2H size={32} color="grey" />
-                )}
             </div>
-        </div>
-            {layout === 'grid' && (
-                <PokemonGrid/>
-            )}
-            {layout === 'list' && (
-                <PokemonList/>
+            {layout === 'grid' ? (
+                <PokemonGrid />
+            ) : (
+                <PokemonList />
             )}
         </div>
-    )
-}
+    );
+};

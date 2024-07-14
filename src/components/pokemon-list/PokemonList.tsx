@@ -7,6 +7,7 @@ import { usePokemonList } from "../../hooks/usePokemonList";
 import { useFavouritesList } from "../../hooks/useFavouritesList";
 import { DetailedCard } from "../detailed-card/DetailedCard";
 import { useEffect, useState } from "react";
+import { Link } from "react-router-dom";
 
 export const PokemonList = () => {
     const { pokemonList, error } = usePokemonList();
@@ -38,6 +39,7 @@ export const PokemonList = () => {
 
                     return (
                         <div key={pokemonNumber} onClick={() => setSelectedPokemon(pokemonNumber)}>
+                            <Link to={`/${pokemonNumber}`}>
                             <PokemonCard
                                 imageUrl={imageUrl}
                                 name={pokemonName}
@@ -46,6 +48,7 @@ export const PokemonList = () => {
                                 onLike={() => handleLikes(pokemonNumber)}
                                 isLiked={likes.includes(pokemonNumber)}
                             />
+                            </Link>
                         </div>
                     );
                 })}
