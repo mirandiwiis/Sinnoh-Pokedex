@@ -62,16 +62,6 @@
         gap: 6px;
     }
 
-    body.dark & {
-        &__info {
-            background-color: var(--color-grey-dark);
-            box-shadow: 0 2px 4px rgba(255, 255, 255, 0.1);
-        }
-
-        &__number {
-            color: var(--color-grey-soft);
-        }
-    }
 }
 
 .fav-btn {

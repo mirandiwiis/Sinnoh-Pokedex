@@ -16,7 +16,26 @@
         min-height: 180px;
         border-radius: 16px;
         box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        padding: 8px 0;
+    }
 
+    &__img {
+        height: 135px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        overflow: hidden;
+
+        & img {
+            max-height: 135px;
+            width: auto;
+            height: auto;
+        }
+    }
+
+    &__types {
+        display: flex;
+        gap: 6px;
     }
 }
 

@@ -49,3 +49,8 @@ body.dark {
     color: var(--color-white);;
   }
 }
+
+img {
+  user-select: none;
+}
+

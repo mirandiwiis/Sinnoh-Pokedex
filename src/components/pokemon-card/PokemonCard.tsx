@@ -33,7 +33,7 @@ export const PokemonCard = (props: PokemonCardProps) => {
                                 onClick={(event) => {  event.preventDefault(); onLike(event); }} 
                                 className={`fav-btn ${className}`}
                             >
-                                {isLiked ? <FaHeart size={18}  color='var(--color-grey-dark)' /> : <FaRegHeart size={18} color='var(--color-grey-dark)'/>}
+                                {isLiked ? <FaHeart size={18}  color='var(--color-red)' /> : <FaRegHeart size={18} color='var(--color-red)'/>}
                             </button>
                         </div>
                     </div>
