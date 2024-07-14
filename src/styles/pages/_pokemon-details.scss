@@ -1,0 +1,98 @@
+.details {
+    user-select: none;
+    width: 80%;
+    height: 700px;
+    background-color: var(--color-grey-soft);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    border-radius: 16px;
+    margin: auto;
+    position: relative;
+
+    &__img-container {
+        position: absolute; /* Posicionar absolutamente el contenedor de la imagen dentro de .detailed-card */
+        top: -50px; /* Ajustar según sea necesario para que la mitad superior de la imagen salga del fondo gris */
+        transform: (0, 0);
+    }
+
+    &__img {
+        height: 260px;
+    }
+
+    &__info {
+        display: flex;
+        justify-content: center;
+        gap: 160px;
+
+
+        & h2 {
+            font-size: 32px;
+            font-weight: bold;
+        }
+
+        & h3 {
+            font-size: 20px;
+            color: var(--color-grey-dark);
+            font-weight: bold;
+        }
+
+        & h4 {
+            font-size: 20px;
+        }
+
+        &--1 {
+            margin-top: 200px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 18px;
+            width: 500px;
+        }
+
+        &--2 {
+            width: 500px;
+            margin-top: 100px;
+         }
+    }
+
+    &__mesures {
+        display: flex;
+        gap: 20px;
+        
+
+        &--data {
+            background-color: var(--color-white);
+            height: 30px;
+            width: 160px;
+            border-radius: 15px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-top: 10px;
+        }
+    }
+
+    &__types {
+        display: flex;
+        gap: 20px;
+    }
+}
+
+.change-img {
+    background-color: var(--color-grey-dark);
+    width: 32px;
+    height: 32px;
+    border-radius: 6px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    margin-left: 216px;    
+
+    &:hover {
+        background-color: var(--color-yellow);
+    }
+
+    &__icon {
+        color: var(--color-white);
+    }
+}

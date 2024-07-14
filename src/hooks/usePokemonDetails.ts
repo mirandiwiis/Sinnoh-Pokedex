@@ -3,10 +3,10 @@ import axios from "axios";
 import { PokemonDetailsType } from "../models/pokemon-details";
 import { mapApiPokemonDetails } from "../utils/maps/mapApiPokemonDetails";
 
-export const usePokemonDetails = (pokemonNumber: string | number | undefined) => {
+export const usePokemonDetails = (pokemonNumber: number | undefined) => {
     const [loading, setLoading] = useState(true);
     const [error, setError] = useState<string | null>(null);
-    const pokemonDetailsRef = useRef<PokemonDetailsType | null>(null);
+    const pokemonDetailsRef = useRef<PokemonDetailsType>();
 
     useEffect(() => {
         const fetchPokemonDetails = async () => {
