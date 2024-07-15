@@ -1,37 +1,37 @@
 .details {
     user-select: none;
     width: 80%;
-    max-width: 1200px; /* Limita el ancho máximo para evitar que sea demasiado ancho en pantallas grandes */
-    height: auto; /* Ajusta la altura automáticamente según el contenido */
+    max-width: 1200px; 
+    height: auto;
     background-color: var(--color-grey-soft);
     box-shadow: var(--box-shadow);
     border-radius: 16px;
     margin: auto;
     margin-top: 20px;
-    padding: 20px; /* Agrega padding en todos los lados para espaciar los contenidos del borde */
+    padding: 20px;
     position: relative;
 
     &__img-container {
-        position: absolute; /* Posicionar absolutamente el contenedor de la imagen dentro de .detailed-card */
-        top: -70px; /* Ajustar según sea necesario para que la mitad superior de la imagen salga del fondo gris */
+        position: absolute;
+        top: -70px; 
         height: 160px;
     }
 
     &__img {
-        height: 100%; /* Ajusta la altura al 100% del contenedor */
-        width: 100%; /* Ajusta el ancho al 100% del contenedor */
-        object-fit: cover; /* Ajusta la imagen para cubrir el contenedor manteniendo la relación de aspecto */
+        height: 100%;
+        width: 100%; 
+        object-fit: cover;
     }
 
     &__info {
         display: flex;
-        justify-content: space-between; /* Distribuye los elementos en dos columnas en desktop */
-        gap: 40px; /* Espacio entre columnas */
+        justify-content: space-between; 
+        gap: 40px;
     }
 
     &__info--1 {
-        flex: 1; /* Ocupa el 50% del espacio en desktop */
-        max-width: 50%; /* Límite de ancho para evitar que el contenido se extienda demasiado */
+        flex: 1; 
+        max-width: 50%; 
         display: flex;
         flex-direction: column;
         align-items: center;
@@ -41,8 +41,8 @@
     }
 
     &__info--2 {
-        flex: 1; /* Ocupa el 50% del espacio en desktop */
-        max-width: 50%; /* Límite de ancho para evitar que el contenido se extienda demasiado */
+        flex: 1; 
+        max-width: 50%; 
         display: flex;
         flex-direction: column;
         gap: 26px;
@@ -50,12 +50,12 @@
 
     &__mesures {
         display: flex;
-        flex-wrap: wrap; /* Permite que los elementos se envuelvan en pantallas pequeñas */
+        flex-wrap: wrap; 
         gap: 20px;
 
         & > div {
-            flex: 1; /* Distribuye los elementos de forma flexible */
-            text-align: center; /* Centra el texto */
+            flex: 1; 
+            text-align: center; 
         }
 
         &--data {
@@ -73,20 +73,20 @@
 
     &__entry {
         margin-top: 26px;
-        text-align: center; /* Centra el texto */
+        text-align: center; 
     }
 
     &__types {
         display: flex;
-        flex-wrap: wrap; /* Permite que los tags se envuelvan en pantallas pequeñas */
+        flex-wrap: wrap; 
         gap: 10px;
-        justify-content: center; /* Centra los elementos */
+        justify-content: center; 
     }
 
     &__stats {
         & h4 {
             margin-bottom: 20px;
-            text-align: center; /* Centra el texto */
+            text-align: center;
         }
     }
 }
@@ -150,12 +150,12 @@
 }
 
 
-/* Media queries para dispositivos móviles y tabletas */
+
 @media (max-width: 1024px) {
     .details {
         &__info {
-            flex-direction: column; /* Cambia a una sola columna en dispositivos más pequeños */
-            gap: 20px; /* Espacio entre elementos */
+            flex-direction: column; 
+            gap: 20px; 
 
             &--1, &--2 {
                 max-width: 100%;
@@ -175,11 +175,11 @@
 
 @media (max-width: 768px) {
     .details {
-        padding: 10px; /* Reduce el padding en dispositivos pequeños */
+        padding: 10px; 
     }
 
     .details__info {
-        gap: 10px; /* Reduce el espacio entre elementos */
+        gap: 10px; 
     }
 
     .details__mesures {
@@ -187,6 +187,6 @@
     }
 
     .details__chain {
-        text-align: center; /* Centra el texto */
+        text-align: center; 
     }
 }

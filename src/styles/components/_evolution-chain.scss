@@ -32,8 +32,8 @@
         overflow: hidden;
 
         & img {
-            max-width: 100px; /* Ajusta el ancho máximo de la imagen */
-            max-height: 100px; /* Ajusta la altura máxima de la imagen */
+            max-width: 100px; 
+            max-height: 100px; 
             width: auto;
             height: auto;
         }
@@ -41,7 +41,7 @@
 
     &__types {
         display: flex;
-        gap: 4px; /* Ajusta el espacio entre los tags de tipo */
+        gap: 4px; 
     }
 }
 

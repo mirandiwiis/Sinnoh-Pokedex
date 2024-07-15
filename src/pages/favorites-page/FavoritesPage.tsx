@@ -18,9 +18,6 @@ export const FavouritesPage = () => {
     if (favPokemon.length === 0) {
         return <div>There's no favourite Pokémon</div>
     }
-
-    console.log(favPokemon);
-
     
     return (
         <div>

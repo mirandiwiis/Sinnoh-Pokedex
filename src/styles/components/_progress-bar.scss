@@ -1,4 +1,4 @@
-/* Estilo para la barra de progreso */
+
 .stat-progress-bar {
     display: flex; 
     align-items: center; 
@@ -24,8 +24,8 @@
 .stat-value {
     font-size: 16px;
     font-weight: bold;
-    text-align: left; /* Alinea el texto a la izquierda */
-    flex: 0; /* Elimina cualquier expansión del elemento */
+    text-align: left; 
+    flex: 0; 
 }
 
 .progress-bar {
@@ -43,7 +43,7 @@
     left: 0;
     height: 100%;
     width: 100%;
-    background-color: var(--color-grey); /* Color de fondo gris */
+    background-color: var(--color-grey); 
 }
 
 .progress-fg {
@@ -52,6 +52,6 @@
     left: 0;
     height: 100%;
     width: 0;
-    background-color: var(--color-yellow); /* Color de fondo verde para el progreso */
-    transition: width 0.3s ease-in-out; /* Transición suave para la animación */
+    background-color: var(--color-yellow); 
+    transition: width 0.3s ease-in-out; 
 }
