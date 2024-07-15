@@ -8,7 +8,7 @@
   <a href="https://github.com/mirandiwiis/Sinnoh-Pokedex"><strong>Explora los docs »</strong></a>
   <br/>
   <br/>
-  <a href="https://sinnoh-pokedex-green.vercel.app/">Demo »</a>  
+  <a href="https://sinnoh-pokedex-green.vercel.app/">App en vivo »</a>  
   </p>
 </div>
 
@@ -80,7 +80,7 @@ Con este tipo de componentes y otros los stats es donde más me atasco y me surj
 - [Interfaces doubts](https://www.reddit.com/r/typescript/comments/vgrdjm/how_do_you_create_an_interface_for_an_api/)
 - [Guide interfaces](https://www.dhiwise.com/post/mastering-typescript-array-of-object-a-comprehensive-guide)
 
-## 4. Añadiendo funcionalidades
+## 5. Añadiendo funcionalidades
 
 Una vez tengo la información y los componentes que renderizan la información paso a implementar las funcionalidades básicas. 
 ### Likes
@@ -140,6 +140,9 @@ Gasté mucho tiempo en crear el componente **Progress Bar** que representa las s
  - [Prevent bubbling](https://stackoverflow.com/questions/38619981/how-can-i-prevent-event-bubbling-in-nested-react-components-on-click)
  - [PokeApi Images styles](https://unpkg.com/css-chain-test@1.0.8/src/PokeApi-Explorer.html)
 
-Miranda Muñoz - mirandamunllor@gmail.com
+## Mejoras
+Me habría gustado refactorizar el código y organizar un poco mejor los ficheros. También crear variables de tipografía, clases reutilizables… Por falta de organización inicial solo dejé creadas las variables de color.
 
-Project Link: [https://github.com/mirandiwiis/Sinnoh-Pokedex](https://github.com/mirandiwiis/Sinnoh-Pokedex)
+Tenía pensado realizar algún testing relacionado con la PokemonCard comprobando si recibía los datos (number, name, img).  También implementar funcionalidad de búsqueda y filtrado por tipos.
+
+
