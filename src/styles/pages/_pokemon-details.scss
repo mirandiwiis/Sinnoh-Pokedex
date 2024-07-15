@@ -15,6 +15,7 @@
         position: absolute;
         top: -70px; 
         height: 160px;
+        z-index: 10000;
     }
 
     &__img {
@@ -68,6 +69,11 @@
             align-items: center;
             margin-top: 10px;
             box-shadow: 0 0 3px 3px rgba(231, 231, 231, 0.539);
+
+            body.dark & {
+                background-color: transparent;
+                box-shadow: 0 0 3px 3px rgba(231, 231, 231, 0.539);;
+            }
         }
     }
 
@@ -170,12 +176,23 @@
             }
         }
 
+        &__img-container {
+            top: -30px; 
+            height: 80px;
+            z-index: 1000;
+        }
     }
 }
 
 @media (max-width: 768px) {
     .details {
         padding: 10px; 
+
+        &__img-container {
+            top: -30px; 
+            height: 120px;
+            z-index: 1000;
+        }
     }
 
     .details__info {
