@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import { usePokemonDetails } from "../../hooks/usePokemonDetails";
 import { getPokemonImage } from "../../utils/getPokemonImage";
 import { PokemonCard } from "../../components/pokemon-card/PokemonCard";
+import { Link } from "react-router-dom";
 
 export const FavouritesPage = () => {
     const [favPokemon, setFavPokemon] = useState<number[]>([]);
@@ -40,13 +41,15 @@ const PokemonCardWrapper = ({ pokemonNumber }: { pokemonNumber: number }) => {
     if (!pokemonDetails) return null;
 
     return (
-        <PokemonCard
-            imageUrl={imageUrl}
-            name={pokemonDetails.name}
-            number={pokemonDetails.number}
-            className="grid" // o 'list' según tu preferencia
-            onLike={() => {}} // Esta función se puede dejar vacía ya que no estamos manejando "likes" aquí
-            isLiked={isLiked}
-        />
+        <Link to={`/${pokemonDetails.number}`}>
+            <PokemonCard
+                imageUrl={imageUrl}
+                name={pokemonDetails.name}
+                number={pokemonDetails.number}
+                className="grid" // o 'list' según tu preferencia
+                onLike={() => {}} // Esta función se puede dejar vacía ya que no estamos manejando "likes" aquí
+                isLiked={isLiked}
+            />
+        </Link>
     );
 }

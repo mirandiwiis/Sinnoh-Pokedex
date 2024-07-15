@@ -8,9 +8,11 @@ export const TopBar = () => {
 
     return (
         <div className="top-bar">
-            <div className="top-bar__logo">
-                <img src="https://static.vecteezy.com/system/resources/thumbnails/027/127/571/small/pokemon-logo-pokemon-icon-transparent-free-png.png" alt="Pokemon Logo" />
-            </div>
+            <Link to={'/'}>
+                <div className="top-bar__logo">
+                    <img src="https://static.vecteezy.com/system/resources/thumbnails/027/127/571/small/pokemon-logo-pokemon-icon-transparent-free-png.png" alt="Pokemon Logo" />
+                </div>
+            </Link>
             <SearchBar/>
             <div className='top-bar__section'>
                 <Link to={isFavouritesPage ? '/' : '/favourites'}>
