@@ -13,12 +13,15 @@ export const Layout = () => {
 
     return (
         <div className="layout">
-            <div className="layout-toggle">
-                <div onClick={changeLayout}>
-                    <CiGrid2H size={32} color={layout === 'grid' ? 'black' : 'grey'} />
-                    <CiGrid41 size={32} color={layout === 'list' ? 'black' : 'grey'} />
+            <div className="toggle-container">
+                <div className="layout-toggle">
+                    <div onClick={changeLayout}>
+                        <CiGrid2H size={32} color={layout === 'grid' ? 'black' : 'grey'} />
+                        <CiGrid41 size={32} color={layout === 'list' ? 'black' : 'grey'} />
+                    </div>
                 </div>
             </div>
+            
             {layout === 'grid' ? (
                 <PokemonGrid />
             ) : (

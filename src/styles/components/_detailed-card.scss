@@ -7,10 +7,10 @@
     position: relative;
 
     &__img-container {
-        position: absolute; /* Posicionar absolutamente el contenedor de la imagen dentro de .detailed-card */
-        top: -80px; /* Ajustar según sea necesario para que la mitad superior de la imagen salga del fondo gris */
-        left: 50%; /* Centrar horizontalmente */
-        transform: translateX(-50%); /* Alinear al centro */
+        position: absolute; 
+        top: -80px;
+        left: 50%; 
+        transform: translateX(-50%);
     }
 
     &__img {
@@ -18,7 +18,7 @@
     }
 
     &__info {
-        margin: 116px 62px ;
+        margin: 100px 62px ;
         display: flex;
         flex-direction: column;
         gap: 16px;
@@ -59,5 +59,21 @@
 
     &__stats {
         user-select: none;
+    }
+}
+
+.detail-link {
+    display: flex;
+    justify-content: flex-end;
+
+
+    &__item {
+        background-color: var(--color-yellow);
+        width: 42px;
+        height: 42px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 21px;
     }
 }

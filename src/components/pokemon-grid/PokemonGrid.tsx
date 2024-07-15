@@ -9,7 +9,7 @@ import { Link } from "react-router-dom";
 
 export const PokemonGrid = () => {
     const { pokemonList, error } = usePokemonList();
-    const { currentPage, totalPages, goToPrevPage, goToNextPage, setPage, firstIndex, lastIndex } = usePagination(pokemonList.length, 21);
+    const { currentPage, totalPages, goToPrevPage, goToNextPage, setPage, firstIndex, lastIndex } = usePagination(pokemonList.length, 20);
     const { likes, handleLikes } = useFavouritesList({ pokemonList });
 
     const currentPokemonList = pokemonList.slice(firstIndex, lastIndex);
@@ -43,9 +43,7 @@ export const PokemonGrid = () => {
                     );
                 })}
             </div>
-            
-            <button >Clear Likes</button>
-            <Pagination
+                 <Pagination
                 currentPage={currentPage}
                 totalPages={totalPages}
                 prevPage={goToPrevPage}

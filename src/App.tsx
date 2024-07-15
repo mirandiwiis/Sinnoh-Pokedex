@@ -1,7 +1,6 @@
 import { Outlet } from 'react-router-dom';
 import './styles/index.scss';
 import { TopBar } from './components/topBar/TopBar';
-import { Footer } from './components/footer/Footer';
 import React from 'react';
 
 function App() {
@@ -9,9 +8,8 @@ function App() {
   return (
     <>
     <React.StrictMode>
-      <TopBar/>
+        <TopBar/>
         <Outlet/>
-      <Footer/>
     </React.StrictMode>
     </>
   )

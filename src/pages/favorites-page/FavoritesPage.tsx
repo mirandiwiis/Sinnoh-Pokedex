@@ -23,7 +23,7 @@ export const FavouritesPage = () => {
     
     return (
         <div>
-            <div className="favorite-pokemon-list">
+            <div className="pokemon-grid">
                 {favPokemon.map(pokemonNumber => (
                     <PokemonCardWrapper key={pokemonNumber} pokemonNumber={pokemonNumber} />
                 ))}
@@ -35,7 +35,7 @@ export const FavouritesPage = () => {
 const PokemonCardWrapper = ({ pokemonNumber }: { pokemonNumber: number }) => {
     const { pokemonDetails } = usePokemonDetails(pokemonNumber);
     const imageUrl = getPokemonImage(pokemonNumber);
-    const isLiked = true; // Asumimos que todos los Pokémon en esta lista están en favoritos
+    const isLiked = true; 
 
     if (!pokemonDetails) return null;
 

@@ -10,3 +10,8 @@ export interface PokemonListFromApi {
     pokemon_entries: PokemonItemFromApi[]
 };
 
+
+
+export interface PokemonListProps {
+    pokemonList: PokemonItemFromApi[];
+}

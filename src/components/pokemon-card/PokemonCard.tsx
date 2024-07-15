@@ -14,7 +14,7 @@ export const PokemonCard = (props: PokemonCardProps) => {
             {pokemonDetails && ( 
                 <div className={`pokemon-card ${className}`}>
                     <img 
-                        src={`https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/${number}.svg`} 
+                        src={`https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/${number}.png`} 
                         alt={name} 
                         className="pokemon-card__img"
                     />
@@ -24,13 +24,13 @@ export const PokemonCard = (props: PokemonCardProps) => {
                             <h3 className="pokemon-card__name">{capitalizeFirstLetter(name)}</h3>
                         </div>
                         <div className={`pokemon-card__${className}`}>
-                            <div className='pokemon-card__types'>
+                            <div className={`pokemon-card__types ${className}`}>
                                 {pokemonDetails.types.map((type, index) => (
                                     <TypeTag key={`${index}-${type.name}`} typeName={type.name} size="sm"/>
                                 ))}
                             </div>
                             <button 
-                                onClick={(event) => {  event.preventDefault(); onLike(event); }} 
+                                onClick={(event) => {  event.preventDefault(); event.stopPropagation(); onLike(event); }} 
                                 className={`fav-btn ${className}`}
                             >
                                 {isLiked ? <FaHeart size={18}  color='var(--color-red)' /> : <FaRegHeart size={18} color='var(--color-red)'/>}

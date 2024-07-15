@@ -8,10 +8,20 @@
         width: 500px;
         display: flex;
         justify-content: space-around;
+
+        @media (max-width: 520px) {
+            max-width: 250px;
+            min-width: 250px;
+        }
     }
 
     &__img {
         height: 60px;
+
+        @media (max-width: 768px) {
+           height: 45px;
+           margin-right: 12px;
+        }
     }
 
     &__info {
@@ -60,8 +70,13 @@
     &__types {
         display: flex;
         gap: 6px;
-    }
 
+        &.list {
+            @media (max-width: 520px) {
+                display: none;
+             }
+        }
+    }
 }
 
 .fav-btn {
@@ -73,6 +88,23 @@
         position: absolute;
         margin-top: -95px;
         margin-left: 60px;
+    }
+
+    &.list {
+       display: none;
+
+       @media (max-width: 520px) {
+            display: block;
+            margin: 0;
+
+    }
+    }
+
+    &.big {
+        position: relative;
+        left: 40%;
+        top: 5%;
+        margin: 0;
     }
 }
 

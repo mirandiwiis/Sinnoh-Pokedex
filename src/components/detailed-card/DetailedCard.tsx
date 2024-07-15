@@ -4,12 +4,16 @@ import { useSpecieDetails } from "../../hooks/useSpecieDetails";
 import { capitalizeFirstLetter } from "../../utils/capitaliceFirstLetter";
 import { StatProgressBar } from "../progress-bar/StatProgressBar";
 import { calculateStateRange } from "../../utils/calculateStatRange";
+import { FaHeart, FaPlus, FaRegHeart } from "react-icons/fa";
+import { Link } from "react-router-dom";
 
-interface DetailedCardProps {
-    pokemonNumber: number;
+export interface DetailedCardProps {
+    pokemonNumber?: number;
+    isLiked: boolean
+    onLike: (event: React.MouseEvent<HTMLButtonElement>) => void;
 }
 
-export const DetailedCard = ({ pokemonNumber }: DetailedCardProps) => {
+export const DetailedCard = ({ pokemonNumber, isLiked, onLike }: DetailedCardProps) => {
     const { pokemonDetails } = usePokemonDetails(pokemonNumber);
     const { pokemonSpecies } = useSpecieDetails(pokemonNumber);
 
@@ -22,12 +26,19 @@ export const DetailedCard = ({ pokemonNumber }: DetailedCardProps) => {
         <div className="detailed-card" key={`datailed-card--${pokemonNumber}`}>
             <div className="detailed-card__img-container">
                 <img
-                    src={`https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/${pokemonNumber}.svg`}
+                    src={`https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/${pokemonNumber}.png`}
                     alt={pokemonSpecies.name}
                     className="detailed-card__img"
                 />
             </div>
+            <button 
+                onClick={(event) =>  onLike(event) } 
+                className={`fav-btn big`}
+                >
+                {isLiked ? <FaHeart size={32}  color='var(--color-red)' /> : <FaRegHeart size={32} color='var(--color-red)'/>}
+            </button>
             <div className="detailed-card__info">
+                
                 <h3>#{pokemonSpecies.id}</h3>
                 <h2>{capitalizeFirstLetter(pokemonSpecies.name)}</h2>
                 <div className='detailed-card__types'>
@@ -48,11 +59,18 @@ export const DetailedCard = ({ pokemonNumber }: DetailedCardProps) => {
                             key={`stat-progress-${index}`}
                             stat={stat.name}
                             statValue={stat.stat_points}
-                            minValue={0} // Acceder de forma segura a min
-                            maxValue={statRange[stat.name]?.max || 100} // Acceder de forma segura a max
+                            minValue={0} 
+                            maxValue={statRange[stat.name]?.max || 160}
                         />
                     ))}
                 </div>
+                <Link to={`/${pokemonNumber}`}>
+                <div className="detail-link">
+                    <div className="detail-link__item">
+                            <FaPlus/>
+                    </div>
+                </div>
+                </Link>
             </div>
         </div>
     );
